@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto, sans-serif;
+}
+button {
+  flex: 1;
+  padding: 5px 0;
+  border: none;
+  cursor: pointer;
+}
+p {
+  font-size: 18px;
+}
+img {
+  width: 100%;
+}
+label {
+  margin-left: 3px;
+}
+input:focus-visible {
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.title {
+  margin: 0 0 10px;
+  font-size: clamp(18px, 2vw + 1vh, 34px);
+}
+
+.pg-inputGroup {
+  margin-bottom: 5px;
+}
+.pg--input {
+  width: 75%;
+  border-radius: 0px;
+  border: 5px solid rgb(38, 38, 38);
+  background: #ffffff;
+}
+.pg--input:focus-visible {
+  border-radius: 0px;
+  outline: none;
+}
+.pg--btn-generate {
+  margin-left: 10px;
+  background: rgb(38, 38, 38);
+  color: #ffffff;
+}
+.pg--btn-generate:hover {
+  opacity: 0.9;
+}
+.pg--length_wrapper {
+  padding-left: 1px;
+}
+.pg--length {
+  border: none;
+  border-bottom: 1px solid rgb(38, 38, 38);
+  width: 23px;
+  padding: 2px;
+  
+}
+.pg-checkboxGroup {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+.pg-checkbox {
+  cursor: pointer;
+}
+.pg-checkbox input {
+  margin: 0;
+  cursor: pointer;
+}
+@media (max-width: 260px) {
+  .pg-inputGroup {
+    flex-direction: column;
+  }
+  .pg--input {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .pg--btn-generate {
+    margin: 0;
+  }
+}

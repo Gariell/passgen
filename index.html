@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PassGen</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <div class="container">
+    <h1 class="title">Password generator</h1>
+    <div class="row pg-inputGroup">
+      <input type="text" class="pg--input">
+      <button class="pg--btn-generate" onclick="generate()">GO</button>
+    </div>
+    <div class="pg--length_wrapper">
+      Number:
+      <input type="text" class="pg--length" oninput="generate()" maxlength="2">
+    </div>
+    <div class="row pg-checkboxGroup">
+      <div class="pg-checkbox">
+        <input type="checkbox" name="pg--param" id="pg--checkbox-paramPng" value="lc" checked  onclick="generate()"> 
+        <label for="pg--paramLc">Lower case</label>
+      </div>
+      <div class="pg-checkbox">
+        <input type="checkbox" name="pg--param" id="pg--checkbox-paramSvg" value="uc"  onclick="generate()"> 
+        <label for="pg--paramUc">Upper case</label>
+      </div>
+      <div class="pg-checkbox">
+        <input type="checkbox" name="pg--param" id="pg--checkbox-paramNum" value="uc" checked onclick="generate()"> 
+        <label for="pg--paramNum">Numbers</label>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
