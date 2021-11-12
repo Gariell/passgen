@@ -64,7 +64,7 @@ input:focus-visible {
   height: 100%;
   width: 20px;
   background: transparent;
-  background: url('./image/copy.svg') center;
+  background: url('../image/copy.svg') center;
   background-size: 100% 50%;
   background-repeat: no-repeat;
   background-position: -3px 50%;
@@ -81,7 +81,7 @@ input:focus-visible {
   background: rgb(38, 38, 38);
   color: #ffffff;
   background-color: rgb(38, 38, 38);
-  background-image: url('./image/renew.svg');
+  background-image: url('../image/renew.svg');
   background-size: 100% 60%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
