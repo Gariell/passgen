@@ -30,6 +30,7 @@ input:focus-visible {
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
+  min-height: 90vh;
 }
 .row {
   display: flex;
@@ -40,15 +41,36 @@ input:focus-visible {
   margin: 0 0 10px;
   font-size: clamp(18px, 2vw + 1vh, 34px);
 }
-
+.pg-wrapper {
+  margin: auto 0;
+}
 .pg-inputGroup {
   margin-bottom: 5px;
 }
 .pg--input {
-  width: 75%;
+  width: 100%;
   border-radius: 0px;
   border: 5px solid rgb(38, 38, 38);
   background: #ffffff;
+}
+.pg--input_wrapper {
+  position: relative;
+  width: calc(100% - 42px);
+}
+.pg--btn-copy {
+  position: absolute;
+  top: 0%;
+  right: 0px;
+  height: 100%;
+  width: 20px;
+  background: transparent;
+  background: url('/image/copy.svg') center;
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  background-position: -3px 50%;
+}
+.pg--btn-copy:hover {
+  opacity: 0.8;
 }
 .pg--input:focus-visible {
   border-radius: 0px;
@@ -58,6 +80,11 @@ input:focus-visible {
   margin-left: 10px;
   background: rgb(38, 38, 38);
   color: #ffffff;
+  background-color: rgb(38, 38, 38);
+  background-image: url('/image/renew.svg');
+  background-size: 100% 60%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 .pg--btn-generate:hover {
   opacity: 0.9;
@@ -78,18 +105,42 @@ input:focus-visible {
   flex-wrap: wrap;
   margin-top: 5px;
 }
-.pg-checkbox {
+.pg--checkbox {
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.pg--checkbox+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
   cursor: pointer;
 }
-.pg-checkbox input {
-  margin: 0;
-  cursor: pointer;
+.pg--checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 2px solid rgb(38, 38, 38);
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+.pg--checkbox:checked+label::before {
+  border-color: rgb(38, 38, 38);
+  background-color: rgb(38, 38, 38);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+  background-size: 65%;
 }
 @media (max-width: 260px) {
   .pg-inputGroup {
     flex-direction: column;
   }
-  .pg--input {
+  .pg--input_wrapper {
     width: 100%;
     margin-bottom: 5px;
   }

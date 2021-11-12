@@ -10,29 +10,41 @@
 <body>
   
   <div class="container">
-    <h1 class="title">Password generator</h1>
-    <div class="row pg-inputGroup">
-      <input type="text" class="pg--input">
-      <button class="pg--btn-generate" onclick="generate()">GO</button>
-    </div>
-    <div class="pg--length_wrapper">
-      Number:
-      <input type="text" class="pg--length" oninput="generate()" maxlength="2">
-    </div>
-    <div class="row pg-checkboxGroup">
-      <div class="pg-checkbox">
-        <input type="checkbox" name="pg--param" id="pg--checkbox-paramPng" value="lc" checked  onclick="generate()"> 
-        <label for="pg--paramLc">Lower case</label>
+
+    <div class="pg-wrapper">
+      <h1 class="title">Password generator</h1>
+      <div class="row pg-inputGroup">
+        
+        <div class="pg--input_wrapper">
+          <input type="text" class="pg--input">
+          <button class="pg--btn-copy" onclick="copyInputValue()"></button>
+        </div>
+        <button class="pg--btn-generate" onclick="generate()"></button>
       </div>
-      <div class="pg-checkbox">
-        <input type="checkbox" name="pg--param" id="pg--checkbox-paramSvg" value="uc"  onclick="generate()"> 
-        <label for="pg--paramUc">Upper case</label>
+      <div class="pg--length_wrapper">
+        Length:
+        <input type="text" class="pg--length" oninput="generate()" maxlength="2">
       </div>
-      <div class="pg-checkbox">
-        <input type="checkbox" name="pg--param" id="pg--checkbox-paramNum" value="uc" checked onclick="generate()"> 
-        <label for="pg--paramNum">Numbers</label>
+      <div class="row pg-checkboxGroup">
+        <div class="pg-checkbox">
+          <input type="checkbox" class="pg--checkbox" name="pg--param" id="pg--paramLc"  checked  onclick="generate()"> 
+          <label for="pg--paramLc">a-z</label>
+        </div>
+        <div class="pg-checkbox">
+          <input type="checkbox" class="pg--checkbox" name="pg--param" id="pg--paramUc"  onclick="generate()"> 
+          <label for="pg--paramUc">A-Z</label>
+        </div>
+        <div class="pg-checkbox">
+          <input type="checkbox" class="pg--checkbox" name="pg--param" id="pg--paramNum" checked onclick="generate()"> 
+          <label for="pg--paramNum">0-9</label>
+        </div>
+        <div class="pg-checkbox">
+          <input type="checkbox" class="pg--checkbox" name="pg--param" id="pg--paramSymb" checked onclick="generate()"> 
+          <label for="pg--paramSymb">Symbols</label>
+        </div>
       </div>
     </div>
+    
   </div>
   <script src="js/script.js"></script>
 </body>
