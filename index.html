@@ -19,15 +19,18 @@
           <input type="text" class="pg--input">
           <button class="pg--btn-copy" onclick="copyInputValue()"></button>
         </div>
+        <div class="pg--length_wrapper">
+          Length:
+          <input type="text" class="pg--length" oninput="generate()" maxlength="2" value="12">
+          <button class="pg--btn-length pg--btn-lengthPlus" onclick="lengthEdit('plus')">+</button>
+          <button class="pg--btn-length pg--btn-lengthMinus" onclick="lengthEdit('minus')">-</button>
+        </div>
         <button class="pg--btn-generate" onclick="generate()"></button>
       </div>
-      <div class="pg--length_wrapper">
-        Length:
-        <input type="text" class="pg--length" oninput="generate()" maxlength="2">
-      </div>
+      
       <div class="row pg-checkboxGroup">
         <div class="pg-checkbox">
-          <input type="checkbox" class="pg--checkbox" name="pg--param" id="pg--paramLc"  checked  onclick="generate()"> 
+          <input type="checkbox" class="pg--checkbox" name="pg--param" id="pg--paramLc"  onclick="generate()" checked> 
           <label for="pg--paramLc">a-z</label>
         </div>
         <div class="pg-checkbox">
@@ -35,17 +38,18 @@
           <label for="pg--paramUc">A-Z</label>
         </div>
         <div class="pg-checkbox">
-          <input type="checkbox" class="pg--checkbox" name="pg--param" id="pg--paramNum" checked onclick="generate()"> 
+          <input type="checkbox" class="pg--checkbox" name="pg--param" id="pg--paramNum" onclick="generate()" checked > 
           <label for="pg--paramNum">0-9</label>
         </div>
         <div class="pg-checkbox">
-          <input type="checkbox" class="pg--checkbox" name="pg--param" id="pg--paramSymb" checked onclick="generate()"> 
+          <input type="checkbox" class="pg--checkbox" name="pg--param" id="pg--paramSymb" onclick="generate()" checked> 
           <label for="pg--paramSymb">Symbols</label>
         </div>
       </div>
     </div>
-    
+
   </div>
+
   <script src="js/script.js"></script>
 </body>
 </html>
